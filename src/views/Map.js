@@ -12,6 +12,7 @@ import {
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import Drawer from 'react-native-drawer'
+import Sidemenu from './Sidemenu'
 
 class Button extends Component {
   render() {
@@ -52,17 +53,11 @@ export default class Map extends Component {
   render() {
     return (
        <Drawer
+        type='overlay'
         ref={(ref) => this._drawer = ref}
-        type="overlay"
-  //content={<ControlPanel />}
-  tapToClose={true}
-  openDrawerOffset={200} // 20% gap on the right side of drawer
-  panCloseMask={0.2}
-  closedDrawerOffset={-3}
-  styles={drawerStyles}
-  tweenHandler={(ratio) => ({
-    main: { opacity:(2-ratio)/2 }
-  })}
+        tapToClose={true}
+        openDrawerOffset={0.3}
+        content={<Sidemenu navigator={this.props.navigator}/>}
          >
         <View style={styles.container}> 
           <NavBar style={styles}>
