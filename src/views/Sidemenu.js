@@ -1,10 +1,18 @@
 import React, { Component, } from 'react'
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
-               
-const vistas = [{key: 'Maps', text: 'Maps'}, { key: 'Rutas', text: 'Rutas'}, { key: 'Califica tu parada', text: 'Califica tu parada'}, 
-{ key: 'Paradas cercanas', text: 'Paradas cercanas'}, { key: 'Estadisticas', text: 'Estadisticas'}]
-
-export default class Sidemenu extrends Component{
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native'
+const vistas = [ 
+  {key: 'Rutas', text: 'Rutas'}, 
+  {key: 'Califica tu parada', text: 'Califica tu parada'}, 
+  {key: 'Paradas cercanas', text: 'Paradas cercanas'}, 
+  {key: 'Estadisticas', text: 'Estadisticas'}]
+ 
+export default class Sidemenu extends Component{
   constructor(props){
     super(props)
   }
@@ -31,6 +39,7 @@ export default class Sidemenu extrends Component{
         <View style={styles.buttonContainer}>
           {buttons}
         </View>
+        
       </View>
     )
   }
@@ -42,11 +51,12 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     borderRightWidth: 1,
     borderRightColor: '#BDBDBD',
-    backgroundColor: '#fff'
+    backgroundColor: '#9A0101'
   },
   buttonContainer: {
     justifyContent: 'flex-start',
     padding: 30,
+    
   },
   button: {
     padding: 5,

@@ -6,6 +6,8 @@ import {
   Image,
 } from 'react-native'
 import Map from './views/Map' 
+import Sidemenu from './views/Sidemenu'
+import Rutas from './views/Rutas'
 
 export default class Base extends Component {
   constructor( props ) {
@@ -17,6 +19,12 @@ export default class Base extends Component {
     switch(route.id) {
       case 'Map':
         return( <Map navigator={_navigator} />);
+        break;
+      case 'Rutas':
+        return( <Rutas  navigator={_navigator} />);
+        break;
+      case 'Sidemenu':
+        return( <Sidemenu navigator={_navigator} />);
         break;
       default:
         return( <Text>SOMETHING WENT WRONG ${route}</Text> );
