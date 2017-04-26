@@ -6,21 +6,21 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native'
-const vistas = [ 
-  {key: 'Rutas', text: 'Rutas'}, 
-  {key: 'Califica tu parada', text: 'Califica tu parada'}, 
-  {key: 'Paradas cercanas', text: 'Paradas cercanas'}, 
+const vistas = [
+  {key: 'Rutas', text: 'Rutas'},
+  {key: 'CalificaTuParada', text: 'Califica tu parada'}, 
+  {key: 'Paradas cercanas', text: 'Paradas cercanas'},
   {key: 'Estadisticas', text: 'Estadisticas'}]
- 
+
 export default class Sidemenu extends Component{
   constructor(props){
     super(props)
   }
-  
+
   navigate(id){
     this.props.navigator.push({ id });
   }
-  
+
   render () {
     const buttons = vistas.map( vistas => {
       return (
@@ -39,7 +39,7 @@ export default class Sidemenu extends Component{
         <View style={styles.buttonContainer}>
           {buttons}
         </View>
-        
+
       </View>
     )
   }
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     justifyContent: 'flex-start',
     padding: 30,
-    
+
   },
   button: {
     padding: 5,
