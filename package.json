@@ -6,14 +6,18 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "react": "^15.1.0",
+    "firebase": "^3.9.0",
+    "react": "^15.4.0",
     "react-native": "^0.27.2",
     "react-native-button": "^1.8.2",
     "react-native-drawer": "^2.3.0",
     "react-native-elements": "^0.11.1",
+    "react-native-maps": "^0.14.0",
+    "react-native-menu": "^0.20.2",
     "react-native-nav": "^1.2.0",
     "react-native-navbar": "^1.7.1",
     "react-native-navigation-bar": "^0.2.1",
+    "react-native-star-rating": "^1.0.7",
     "react-native-vector-icons": "^4.0.1"
   },
   "devDependencies": {

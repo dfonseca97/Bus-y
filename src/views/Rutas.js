@@ -6,7 +6,13 @@ import {
 } from 'react-native'
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
-const rutas = [{key: 'Map', text: 'Atras'},]
+import { List, ListItem } from 'react-native-elements'
+
+const rutas = [
+  {title: 'Gascuña Ruta 1',icon: 'directions-bus'}, 
+  {title: 'Sabaneta',icon: 'directions-bus'}, 
+  {title: 'Envigado Dorado-La Paz',icon: 'directions-bus'}
+  ]
 
 class Rutas extends Component {
 
@@ -39,6 +45,17 @@ class Rutas extends Component {
           </NavButtonText>
         </NavButton>
       </NavBar>
+        <List>
+        {
+           rutas.map((item, i) => (
+           <ListItem
+               key={i}
+               title={item.title}
+               leftIcon={{name: item.icon}}
+             />
+           ))
+          }
+       </List>
       </View>
     )
   }

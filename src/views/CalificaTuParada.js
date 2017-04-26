@@ -6,6 +6,7 @@ import {
   View,
   Image,
   StyleSheet,
+  Text,
 } from 'react-native'
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
@@ -58,7 +59,6 @@ class CalificaTuParada extends Component {
               </NavButtonText>
             </NavButton>
           </NavBar>
-      </View>
       <MenuContext style={{ flex: 1 }} ref="MenuContext">
         <View style={styles.content}>
           <Menu style={styles.dropdown} onSelect={(value) => this.setState({ dropdownSelection: value })}>
@@ -86,7 +86,6 @@ class CalificaTuParada extends Component {
           </Menu>
         </View>
       </MenuContext>
-      <View>
         <StarRating
           disabled={false}
           maxStars={5}

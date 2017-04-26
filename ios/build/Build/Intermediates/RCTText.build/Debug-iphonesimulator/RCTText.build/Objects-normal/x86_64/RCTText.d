@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/Libraries/Text/RCTText.m \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h

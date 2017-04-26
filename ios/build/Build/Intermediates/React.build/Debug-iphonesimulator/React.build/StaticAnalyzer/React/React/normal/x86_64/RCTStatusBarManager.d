@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Modules/RCTStatusBarManager.m \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Modules/RCTStatusBarManager.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/juanestebanfonseca/Desktop/Busy/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Modules/RCTEventEmitter.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/juanestebanfonseca/Desktop/Busy/node_modules/react-native/React/Base/RCTUtils.h

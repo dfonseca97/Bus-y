@@ -8,6 +8,7 @@ import {
 import Map from './views/Map' 
 import Sidemenu from './views/Sidemenu'
 import Rutas from './views/Rutas'
+import CalificaTuParada from './views/CalificaTuParada'
 
 export default class Base extends Component {
   constructor( props ) {
@@ -22,6 +23,9 @@ export default class Base extends Component {
         break;
       case 'Rutas':
         return( <Rutas  navigator={_navigator} />);
+        break;
+      case 'CalificaTuParada':
+        return(<CalificaTuParada navigator={_navigator}/>);
         break;
       case 'Sidemenu':
         return( <Sidemenu navigator={_navigator} />);
