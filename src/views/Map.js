@@ -3,12 +3,13 @@ import {
   Navigator,
   AppRegistry,
   StyleSheet,
+  MapView,
   Text,
   View,
-  MapView,
   TouchableHighlight,
   Image,
 } from 'react-native'
+//import MapView from 'react-native-maps';
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import Drawer from 'react-native-drawer'
@@ -36,7 +37,7 @@ class Button extends Component {
   }
 }
 
-export default class Map extends Component {
+class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {taps: 0};
@@ -50,6 +51,7 @@ export default class Map extends Component {
       taps: this.state.taps + 1
     });
   }
+
   render() {
     return (
        <Drawer
@@ -131,3 +133,4 @@ const styles = StyleSheet.create({
     height: 50
   },  
 });
+export default Map

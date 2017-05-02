@@ -6,19 +6,39 @@ import {
   View,
   Image,
   StyleSheet,
+  ScrollView,
   Text,
+  TextInput,
+  TouchableHighlight
 } from 'react-native'
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
-import Menu, { MenuContext, MenuOptions, MenuOption, MenuTrigger } from 'react-native-menu';
+import ModalPicker from 'react-native-modal-picker'
 import StarRating from 'react-native-star-rating';
 
+class Button extends Component {
+  render() {
+    return (
+      <TouchableHighlight
+        onPress = {() => {this.props.onPress()}}
+        underlayColor = "white" 
+        activeOpacity = {0.7}>
+        <View style = {styles.button}>
+          <Text style={styles.buttonBText}>
+            Calificar
+          </Text>
+        </View>
+      </TouchableHighlight>
+    );
+  }
+}
 
 class CalificaTuParada extends Component {
  constructor(props) {
     super(props);
     this.state = {
-      starCount: 3.5
+      starCount: 0,
+      textInputValue: ''
     };
    this.navigate = this.navigate.bind(this);
     }
@@ -31,80 +51,75 @@ class CalificaTuParada extends Component {
     });
   }
   render() {
+    let index = 0;
+        const data = [
+            { key: index++, section: true, label: 'Paradas Disponibles' },
+            { key: index++, label: 'Oviedo' },
+            { key: index++, label: 'Rio Sur' },
+            { key: index++, label: 'Milla de Oro' },
+            { key: index++, label: 'La Strada' },
+            { key: index++, label: 'Huehue' }
+        ];
     return (
       <View>
          <NavBar style={styles}>
           <NavButton>
             <NavButtonText
               style={styles.buttonText}
-              onPress={() => { this.navigate('Map')}}
+              onPress={() => { this.navigate.pop()}}
               >
               {"Atras"}
             </NavButtonText>
           </NavButton>
           <NavTitle style={styles.title}>
             {"Califica tu parada"}
-            <Image
-              style={{
-                width: 30,
-                height: 20,
-              }}
-              resizeMode={"contain"}
-              source={require('../Resources/estrella.png')}
-              />
           </NavTitle>
             <NavButton>
               <NavButtonText>
                 {"    "}
               </NavButtonText>
             </NavButton>
-          </NavBar>
-      <MenuContext style={{ flex: 1 }} ref="MenuContext">
-        <View style={styles.content}>
-          <Menu style={styles.dropdown} onSelect={(value) => this.setState({ dropdownSelection: value })}>
-            <MenuTrigger>
-              <Text>{this.state.dropdownSelection}</Text>
-            </MenuTrigger>
-            <MenuOptions optionsContainerStyle={styles.dropdownOptions}
-              renderOptionsContainer={(options) => <ScrollView><Text>CHOOSE SOMETHING....</Text>{options}</ScrollView>}>
-              <MenuOption value="Option One">
-                <Text>Option One</Text>
-              </MenuOption>
-              <MenuOption value="Option Two">
-                <Text>Option Two</Text>
-              </MenuOption>
-              <MenuOption value="Option Three">
-                <Text>Option Three</Text>
-              </MenuOption>
-              <MenuOption value="Option Four">
-                <Text>Option Four</Text>
-              </MenuOption>
-              <MenuOption value="Option Five">
-                <Text>Option Five</Text>
-              </MenuOption>
-            </MenuOptions>
-          </Menu>
+        </NavBar>
+        <View style={styles.modal}>
+          <ModalPicker
+            data={data}
+            initValue="Select something yummy!"
+            onChange={(option)=>{ this.setState({textInputValue:option.label})}}>
+           <TextInput
+             style={{borderWidth:1, borderColor:'#ccc', padding:10, height:30}}
+             editable={false}
+             placeholder="-Selecciona Tu Parada-"
+             value={this.state.textInputValue} />  
+          </ModalPicker>
         </View>
-      </MenuContext>
-        <StarRating
-          disabled={false}
-          maxStars={5}
-          rating={this.state.starCount}
-          selectedStar={(rating) => this.onStarRatingPress(rating)}
-          starColor={'yellow'}
-          emptyStarColor={'#f2828a'}
-          starSize= {30}
-        />
+        <View>
+          <StarRating
+            disabled={false}
+            maxStars={5}
+            rating={this.state.starCount}
+            selectedStar={(rating) => this.onStarRatingPress(rating)}
+            starColor={'#EDD21F'}
+            emptyStarColor={'#EDD21F'}
+            starSize={40}
+          />
+        </View>
+        <Button onPress={() => { this.onTap()}}/>
       </View>
     )
   }
 }
+      
 
 const styles = StyleSheet.create({
+  modal: {
+    padding: 50,
+    
+  },
   statusBar: {
     backgroundColor: 'white',
   },
   navBar: {
+
     backgroundColor: '#9A0101',
   },
   title: {
@@ -113,26 +128,27 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
   },
+  buttonBText: {
+    color: 'white',
+  },
+  button: {
+    backgroundColor: '#33AAFF',
+    borderWidth: 10,
+    borderRadius: 60,
+    borderColor: '#33AAFF',
+    padding: 5,
+    width: 85,
+    height: 50,
+    top: 50,
+    alignSelf: 'center'
+  },  
   content: {
-    backgroundColor: 'white',
+    backgroundColor: 'red',
     paddingHorizontal: 10,
     paddingTop: 20,
     paddingBottom: 30,
     borderBottomWidth: 1,
     borderColor: '#ccc'
-  },
-  dropdown: {
-    width: 300,
-    borderColor: '#999',
-    borderWidth: 1,
-    padding: 5
-  },
-  dropdownOptions: {
-    marginTop: 30,
-    borderColor: '#ccc',
-    borderWidth: 2,
-    width: 300,
-    height: 200
   }
 })
 

@@ -1,4 +1,4 @@
-import React, { Component, } from 'react'
+import React, { Component } from 'react'
 import {
   View,
   Image,
@@ -26,12 +26,12 @@ class Rutas extends Component {
   render() {
     return (
       
-      <View>
+      <View style={styles.container}>
          <NavBar style={styles}>
         <NavButton>
           <NavButtonText 
             style={styles.buttonText}
-            onPress={() => { this.navigate('Map')}}
+            onPress={() => this.navigate('CalificaTuParada')}
             >
             {"Atras"}
           </NavButtonText>
@@ -74,6 +74,9 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
   },
+  container: {
+    backgroundColor: '#9A0101'
+  }
 })
 
 export default Rutas
