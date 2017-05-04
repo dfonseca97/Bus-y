@@ -5,11 +5,11 @@ import {
   StyleSheet,
   Text,
   View,
+  MapView,
   TouchableHighlight,
   Image,
 } from 'react-native'
-import renderIf from './renderIf'
-import MapView from 'react-native-maps';
+//import MapView from 'react-native-maps';
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import Drawer from 'react-native-drawer'
@@ -28,10 +28,10 @@ class Button2 extends Component {
     return (
       <TouchableHighlight
         onPress = {() => {this.props.onPress()}}
-        underlayColor = "white" 
+        underlayColor = "white"
         activeOpacity = {0.7}>
         <View style = {styles.button}>
-          <Image 
+          <Image
             style={{
               width: 20,
               height: 20,
@@ -45,7 +45,7 @@ class Button2 extends Component {
   }
 }
 
-class Map extends Component {
+export default class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {taps: 0};
@@ -59,7 +59,6 @@ class Map extends Component {
       taps: this.state.taps + 1
     });
   }
-
   render() {
     return (
        <Drawer
@@ -69,10 +68,10 @@ class Map extends Component {
         openDrawerOffset={0.3}
         content={<Sidemenu navigator={this.props.navigator}/>}
          >
-        <View style={styles.container}> 
+        <View style={styles.container}>
           <NavBar style={styles}>
             <NavButton onPress={() => {this._drawer.open()}}>
-              <Image 
+              <Image
                 style={{
                   width: 30,
                   height: 20,
@@ -162,15 +161,13 @@ const drawerStyles = {
   drawer: { shadowColor: 'black', shadowOpacity: 0.8, shadowRadius: 3},
   main: {paddingLeft: 3},
   drawerOverlay: {
-    
+
   }
 }
 
 const styles = StyleSheet.create({
-   card: {
-    width: 300
-  },
-  statusBar: {
+  
+ statusBar: {
     backgroundColor: 'white',
   },
   navBar: {
@@ -194,17 +191,4 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50
   },  
-  title2: {
-    fontSize:2,
-    backgroundColor: 'transparent'
-  },
-  button2: {
-    marginRight: 2
-  },
-  map: {
-    position: 'absolute',
-
-    
-  }
 });
-export default Map

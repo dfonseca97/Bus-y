@@ -6,12 +6,13 @@ import {
 } from 'react-native'
 import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
-import { List, ListItem } from 'react-native-elements'
-
-const estadisticas = [
-  {title: 'Estadisticas de Rutas', key: 'EstRutas', icon: ''},
-  {title: 'Estadisticas de Paradas', key: 'EstParadas', icon: ''}
-  ]
+import {
+  Card,
+  CardImage,
+  CardTitle,
+  CardContent,
+  CardAction
+} from 'react-native-card-view';
 
 class Estadisticas extends Component {
 
@@ -35,7 +36,7 @@ class Estadisticas extends Component {
             </NavButtonText>
           </NavButton>
           <NavTitle style={styles.title}>
-            {"Estadisticas"}
+            {"Estadisticas de Rutas"}
           </NavTitle>
           <NavButton>
             <NavButtonText>
@@ -43,19 +44,31 @@ class Estadisticas extends Component {
             </NavButtonText>
           </NavButton>
         </NavBar>
-        <List>
-          {
-            estadisticas.map((item, i) => (
-              <ListItem
-                key={i} 
-                title={item.title}
-                leftIcon={{name: item.icon}}
-                onPress={() => this.navigate(estadisticas.key)}
-                />
-              ))
-            }
-        </List>
       </View>
+      <Card styles={{
+         card: {
+           width: 360,
+           height: 200,
+           position:'absolute',
+           top: 65,
+           left: 3,
+           backgroundColor: 'rgba(255,255,255,0.85)',
+           }}}>
+         <CardContent>
+          <Image
+            style={{
+               width: 200,
+               height: 200,
+               right: 140,
+               top: 2,
+             }}
+            resizeMode={"contain"}
+            source={require('../Resources/momazo.jpg')}
+            />
+         </CardContent>
+         <CardAction >
+         </CardAction>
+       </Card>
     )
   }
 }

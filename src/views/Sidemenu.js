@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, } from 'react'
 import {
   View,
   Text,
@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 const vistas = [
   {key: 'Rutas', text: 'Rutas'},
-  {key: 'CalificaTuParada', text: 'Califica tu parada'}, 
+  {key: 'CalificaTuParada', text: 'Califica tu parada'},
   {key: 'Paradas cercanas', text: 'Paradas cercanas'},
   {key: 'Testing2', text: 'Testing2'}]
 
