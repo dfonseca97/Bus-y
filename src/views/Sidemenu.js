@@ -10,7 +10,7 @@ const vistas = [
   {key: 'Rutas', text: 'Rutas'},
   {key: 'CalificaTuParada', text: 'Califica tu parada'}, 
   {key: 'Paradas cercanas', text: 'Paradas cercanas'},
-  {key: 'Estadisticas', text: 'Estadisticas'}]
+  {key: 'Testing2', text: 'Testing2'}]
 
 export default class Sidemenu extends Component{
   constructor(props){

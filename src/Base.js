@@ -8,8 +8,8 @@ import {
 import Map from './views/Map' 
 import Sidemenu from './views/Sidemenu'
 import Rutas from './views/Rutas'
+import Testing2 from './views/Testing2';
 import CalificaTuParada from './views/CalificaTuParada'
-
 export default class Base extends Component {
   constructor( props ) {
     super( props )
@@ -29,6 +29,9 @@ export default class Base extends Component {
         break;
       case 'Sidemenu':
         return( <Sidemenu navigator={_navigator} />);
+        break;
+      case 'Testing2':
+        return(<Testing2 navigator={_navigator}/>);
         break;
       default:
         return( <Text>SOMETHING WENT WRONG ${route}</Text> );

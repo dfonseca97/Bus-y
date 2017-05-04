@@ -10,6 +10,7 @@
     "react": "^15.4.0",
     "react-native": "^0.27.2",
     "react-native-button": "^1.8.2",
+    "react-native-card-view": "0.0.3",
     "react-native-chooser": "^1.5.1",
     "react-native-drawer": "^2.3.0",
     "react-native-dropdown": "0.0.6",
