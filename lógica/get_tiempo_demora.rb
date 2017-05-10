@@ -38,4 +38,7 @@ def get_tiempo_demora(parada, bus)
 	time = JSON.parse(response)["rows"][0]["elements"][0]["duration"]["text"]
 end
 
-puts get_tiempo_demora('Oviedo', 'Gascuna_1')
+parada = gets.chomp
+bus = gets.chomp
+
+puts get_tiempo_demora(parada, bus)
