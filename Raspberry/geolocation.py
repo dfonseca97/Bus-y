@@ -11,7 +11,7 @@ def getLocation():
     jsonPayload = json.dumps(payload)
     #print jsonPayload
     headers = {'content-type': 'application/json'}
-    privateKey = "<your_key>"
+    privateKey = "AIzaSyB-eOeCcry_8tFbcR56Z4MD3WljgzJbwSo"
     url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + privateKey
     r = requests.post(url,data=jsonPayload,headers = headers)
     response = json.loads(r.text)
