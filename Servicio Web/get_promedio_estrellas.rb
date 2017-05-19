@@ -22,10 +22,7 @@ def calcular_promedio_calificacion(parada)
    numero_calificaciones = Integer(firebase.get('https://prueba-2a1c3.firebaseio.com/Paradas/' + parada + '/calificaciones').response.content)
 
    # Calcula el promedio
-   calificacion_actual/numero_calificaciones
+  total = calificacion_actual/numero_calificaciones
+  return total.to_json
 
 end
-
-parada = gets.chomp
-
-puts calcular_promedio_calificacion(parada)

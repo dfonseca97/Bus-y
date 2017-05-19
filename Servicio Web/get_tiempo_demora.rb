@@ -11,7 +11,7 @@ require 'json'
 #
 # @param parada [String] la parada destino del bus
 # @param bus [String] el bus solicitado
-# @return [String] tiempo estimado de llegada del bus a la parada solicitada.
+# @return [JSON] Información del trayecto desde las coordenadas del bus hasta las coordenadas de la parada deseada.
 def get_tiempo_demora(parada, bus)
 
 	# URI de la base de datos del proyecto en Firebase.
@@ -31,14 +31,9 @@ def get_tiempo_demora(parada, bus)
 
 	#Llamada al Distance Matrix API de Google
 	response = request.get_content('https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=' + coordenada_x_origen.to_s() +
-	 ',' + coordenada_y_origen.to_s() + '&destinations=' + coordenada_x_destino.to_s() +',
-	' + coordenada_y_destino.to_s() + '&key=AIzaSyA-AXmZm4tiDLl0fs_AIjRstEme4IMGrjU')
+	 ',' + coordenada_y_origen.to_s() + '&destinations=' + coordenada_x_destino.to_s() +','+ coordenada_y_destino.to_s() +
+	  '&key=AIzaSyA-AXmZm4tiDLl0fs_AIjRstEme4IMGrjU')
 
-	#Extracción de la información necesaria. En este caso el tiempo de demora
-	time = JSON.parse(response)["rows"][0]["elements"][0]["duration"]["text"]
+	 return response
 end
 
-parada = gets.chomp
-bus = gets.chomp
-
-puts get_tiempo_demora(parada, bus)

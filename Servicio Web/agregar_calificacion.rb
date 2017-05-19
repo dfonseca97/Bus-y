@@ -37,8 +37,3 @@ def agregar_calificacion(parada, estrellas)
    firebase.update('https://prueba-2a1c3.firebaseio.com/Paradas/' + parada, {:calificaciones => numero_calificaciones})
 
 end
-
-parada = gets.chomp
-estrellas = gets.chomp
-
-agregar_calificacion(parada, estrellas)
