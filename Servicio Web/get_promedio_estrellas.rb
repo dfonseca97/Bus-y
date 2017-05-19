@@ -8,7 +8,7 @@ require 'json'
 # promedio de estrellas. Recuperando la suma total de estrellas y la cantidad de veces que ha sido calificada y con estos datos se logra sacar el promedio.
 #
 # @param parada [String] la parada a calcular el promedio de estrellas
-# @return [Integer] Promedio de estrellas de la parada.
+# @return [JSON] Promedio de estrellas de la parada.
 def calcular_promedio_calificacion(parada)
    
    # URI de la base de datos del proyecto en Firebase.
