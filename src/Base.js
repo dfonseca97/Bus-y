@@ -8,9 +8,12 @@ import {
 import Map from './views/Map' 
 import Sidemenu from './views/Sidemenu'
 import Rutas from './views/Rutas'
-import Testing2 from './views/Testing2';
 import CalificaTuParada from './views/CalificaTuParada'
-export default class Base extends Component {
+import Estadisticas from './views/Estadisticas'
+import EstParadas from './views/EstParadas'
+import ParadasCercanas from './views/ParadasCercanas'
+
+class Base extends Component {
   constructor( props ) {
     super( props )
     this.renderScene = this.renderScene.bind(this);
@@ -19,7 +22,7 @@ export default class Base extends Component {
     _navigator = navigator;
     switch(route.id) {
       case 'Map':
-        return( <Map navigator={_navigator} />);
+        return( <Map navigator={_navigator} data={route.data} name={route.name} />);
         break;
       case 'Rutas':
         return( <Rutas  navigator={_navigator} />);
@@ -30,8 +33,11 @@ export default class Base extends Component {
       case 'Sidemenu':
         return( <Sidemenu navigator={_navigator} />);
         break;
-      case 'Testing2':
-        return(<Testing2 navigator={_navigator}/>);
+      case 'Estadisticas':
+        return( <Estadisticas navigator={_navigator} />);
+        break;
+      case 'ParadasCercanas':
+        return( <ParadasCercanas navigator={_navigator} />);
         break;
       default:
         return( <Text>SOMETHING WENT WRONG ${route}</Text> );
@@ -46,6 +52,6 @@ export default class Base extends Component {
     )
   }
 }
-
+export default Base
 
   

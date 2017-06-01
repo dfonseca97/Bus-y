@@ -9,8 +9,8 @@ import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import { List, ListItem } from 'react-native-elements'
 
 const estadisticas = [
-  {title: 'Estadisticas de Rutas', key: 'EstRutas', icon: ''},
-  {title: 'Estadisticas de Paradas', key: 'EstParadas', icon: ''}
+  {title: 'Estadisticas de Rutas', key: 'EstRutas'},
+  {title: 'Estadisticas de Paradas', key: 'EstParadas'}
   ]
 
 class Estadisticas extends Component {
@@ -31,7 +31,7 @@ class Estadisticas extends Component {
               style={styles.buttonText}
               onPress={() => { this.navigate('Map')}}
               >
-              {"Atras"}
+              {""}
             </NavButtonText>
           </NavButton>
           <NavTitle style={styles.title}>
@@ -49,8 +49,7 @@ class Estadisticas extends Component {
               <ListItem
                 key={i} 
                 title={item.title}
-                leftIcon={{name: item.icon}}
-                onPress={() => this.navigate(estadisticas.key)}
+                onPress={() => this.navigate('EstParadas')}
                 />
               ))
             }

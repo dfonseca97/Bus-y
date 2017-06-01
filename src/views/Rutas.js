@@ -9,10 +9,12 @@ import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import { List, ListItem } from 'react-native-elements'
 
 const rutas = [
-  {title: 'Gascuña Ruta 1',icon: 'directions-bus'},
+  {title: 'Gascuña 1',icon: 'directions-bus'},
   {title: 'Sabaneta',icon: 'directions-bus'},
-  {title: 'Envigado Dorado-La Paz',icon: 'directions-bus'}
+  {title: 'Env. Dorado',icon: 'directions-bus'}
   ]
+
+
 
 class Rutas extends Component {
 
@@ -20,19 +22,20 @@ class Rutas extends Component {
     super(props);
    this.navigate = this.navigate.bind(this);
    }
-  navigate(id) {
-    this.props.navigator.push({ id });
+  navigate(id, data, name) {
+    this.props.navigator.push({ id, data, name});
   }
   render() {
+    
     return (
       <View>
         <NavBar style={styles}>
-          <NavButton>
+          <NavButton
+            onPress={() => { this.props.navigator.pop()}}>
             <NavButtonText
-              style={styles.buttonText}
-              onPress={() => { this.navigate('Map')}}
+              style={styles.buttonText} 
               >
-              {"Atras"}
+              {"Back"}
             </NavButtonText>
           </NavButton>
           <NavTitle style={styles.title}>
@@ -51,6 +54,7 @@ class Rutas extends Component {
                 key={i}
                 title={item.title}
                 leftIcon={{name: item.icon}}
+                onPress={() => { this.navigate('Map',true,item.title)}} 
                 />
               ))
             }

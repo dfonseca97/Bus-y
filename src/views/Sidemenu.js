@@ -9,8 +9,9 @@ import {
 const vistas = [
   {key: 'Rutas', text: 'Rutas'},
   {key: 'CalificaTuParada', text: 'Califica tu parada'},
-  {key: 'Paradas cercanas', text: 'Paradas cercanas'},
-  {key: 'Testing2', text: 'Testing2'}]
+  {key: 'ParadasCercanas', text: 'Paradas cercanas'},
+  {key: 'Estadisticas', text: 'Estadisticas'},
+  ]
 
 export default class Sidemenu extends Component{
   constructor(props){

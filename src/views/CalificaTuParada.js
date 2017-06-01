@@ -4,6 +4,7 @@
 import React, { Component, } from 'react'
 import {
   View,
+  Alert,
   Image,
   StyleSheet,
   ScrollView,
@@ -15,6 +16,8 @@ import NavigationBar from 'react-native-navbar';
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
 import ModalPicker from 'react-native-modal-picker'
 import StarRating from 'react-native-star-rating';
+
+var alertMessage = '¡Su calificación se ha enviado exitosamente!'
 
 class Button extends Component {
   render() {
@@ -50,6 +53,10 @@ class CalificaTuParada extends Component {
       starCount: rating
     });
   }
+  onTap = () => Alert.alert(
+            '¡Calificada!',
+            alertMessage,
+          )
   render() {
     let index = 0;
         const data = [
@@ -63,12 +70,12 @@ class CalificaTuParada extends Component {
     return (
       <View>
          <NavBar style={styles}>
-          <NavButton>
+          <NavButton 
+            onPress={() => { this.props.navigator.pop()}}>
             <NavButtonText
               style={styles.buttonText}
-              onPress={() => { this.navigate.pop()}}
               >
-              {"Atras"}
+              {"Back"}
             </NavButtonText>
           </NavButton>
           <NavTitle style={styles.title}>
@@ -92,7 +99,7 @@ class CalificaTuParada extends Component {
              value={this.state.textInputValue} />  
           </ModalPicker>
         </View>
-        <View>
+        <View style={styles.starContainer}>
           <StarRating
             disabled={false}
             maxStars={5}
@@ -111,6 +118,12 @@ class CalificaTuParada extends Component {
       
 
 const styles = StyleSheet.create({
+  starContainer: {
+    alignItems: 'center',
+    width: 200,
+    left: 90,
+    bottom: 10
+  },
   modal: {
     padding: 50,
     
@@ -124,6 +137,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: 'white',
+    right: 10
   },
   buttonText: {
     color: 'white',
